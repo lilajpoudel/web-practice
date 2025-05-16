@@ -4,54 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title><style>
-        .row {
-      display: flex;
+     body{
+        background-color: rgb(185, 186, 188);
+        font-family: sans-serif;
+        display:flex;
+        padding:20px;
+        justify-content:center;
+        align-items: center;
+        
+    }
+    .row {
+      display:flex;
       justify-content: center ; /* centers the containers horizontally */
-      gap: 10%; /* space between containers */
+      gap: 20px; /* space between containers */
       flex-wrap: wrap; /* allows them to wrap on small screens */
-      padding: 75px;
+      align-items: center;
+      
     }
     .container {
-      border: 1px solid #ccc;
+    
       padding: 15px;
-      margin: 10px;
       width: 300px;
       display:inline-block;
       text-align: center;
-      border-radius: 5%;
-      border-color: white;
+      border-radius: 10px;
+      background: white;
     }
 
-    img {
+    .container img {
       border-radius: 50%;
+      border: 2px solid rgb(199, 60, 9);
+      width: 80px;
+      height:80px;
     }
     h3{
         background-color: rgb(199, 227, 239);
         border-radius: 5px;
-        padding: auto;
+        padding: 5px;
+        margin: 5px;
+        font-size: 14px;
     }
-    h4{
-        background-color: rgb(162, 250, 162);
-        border-radius: 5px;
-       
-
-    }
-    body{
-        background-color: rgb(247, 248, 249);
-    }
+    
+  
     .container a {
         background-color: greenyellow;
-        padding: 10px;
+        padding: 6px 12px;
         display: inline-block;
-        border-radius: 5%;
-         color:white ;
+        border-radius: 5px;
+        color:white ;
+        margin-top: 10px;
+        font-size: 14px;
+        text-decoration: none;
 
+    }
+    .container p{
+        font-size: 13px;
+        color: #555;
     }
   </style>
 </head>
 <body>
     
-    <div class="row"style="background-color:w">
+    <div class="row">
     
          <div class ="container">
         <img src ="444485023_1366797200653289_2869143985565116243_n (1).jpg" width="150">
@@ -67,10 +81,11 @@
         <h3> CSS</h3>
         <h3>Java script</h3>
         <h3> PHP</h3>
-        <a href="https://github.com/lilajpoudel">GitHub Profile</a>
-            
-    </div>
-     <div class ="container">
+        <div>
+        <a href="https://github.com/lilajpoudel"> GitHub Profile </a>
+        </div>
+        </div>
+        <div class ="container">
         <img src ="444485023_1366797200653289_2869143985565116243_n (1).jpg" width="150">
     
         <h2>Lilaj Paudel</h2>
@@ -83,10 +98,12 @@
         <h3> CSS</h3>
         <h3>Java script</h3>
         <h3> PHP</h3>
+        <div>
         <a href="https://github.com/lilajpoudel">GitHub Profile</a>
-    </div>
+        </div>
+        </div>
    
-     <div class ="container">
+        <div class ="container">
         <img src ="444485023_1366797200653289_2869143985565116243_n (1).jpg" width="150">
     
         <h2>Lilaj Paudel</h2>
@@ -98,8 +115,10 @@
         <h3> CSS</h3>
         <h3>Java script</h3>
         <h3> PHP</h3>
+        <div>
        <a href="https://github.com/lilajpoudel">GitHub Profile</a>
-    </div>
+       </div>
+       </div>
     </div>
 
 </body>
