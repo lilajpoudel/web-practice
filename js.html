@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="alert('Hello to my website.')">Click me</button>
+    <button onclick="confirm('confirmed')">confirm button</button>
+    <button onclick="prompt('promoted')">prompt button</button>
+    <button onclick ="askName()">Enter name </button>
+    <button onclick="askNumber()">Multiply a number</button>
+    <script>
+        function askName(){
+            let name = prompt ("what is your name ");
+            if (name){
+                alert ("Hello,"+name+"!");
+
+            }else{
+                alert("u didnt enter a name");
+            }
+            console.log(2+2  )     }
+ 
+    </script>
+</body>
+</html>
