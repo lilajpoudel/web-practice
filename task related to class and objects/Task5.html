@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library System</title>
+</head>
+<body>
+    <h1>Library Book Info</h1>
+    <pre id="output">Loading...</pre>
+
+    <script>
+        // Step 1: Create the Book class
+        class Book {
+            constructor(title, author) {
+                this.title = title;
+                this.author = author;
+                this.available = true; // default value
+            }
+
+            // Method to toggle availability
+            toggleAvailability() {
+                this.available = !this.available;
+            }
+        }
+
+        // Step 2: Add a prototype method to Book
+        Book.prototype.getBookInfo = function() {
+            return `Title: ${this.title}, Author: ${this.author}, Available: ${this.available ? "Yes" : "No"}`;
+        };
+
+        // Step 3: Create two books
+        const book1 = new Book("The Alchemist", "Paulo Coelho");
+        const book2 = new Book("1984", "George Orwell");
+
+        // Toggle availability of book2
+        book2.toggleAvailability();
+
+        // Step 4: Display their info
+        const outputText = `
+${book1.getBookInfo()}
+${book2.getBookInfo()}
+        `;
+
+        document.getElementById("output").textContent = outputText;
+    </script>
+</body>
+</html>

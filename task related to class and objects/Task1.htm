@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Object Literal</h1>
+    <pre id="output">
+   
+    </pre>
+    <script>
+        const product={
+            name:"Wirless Mouse",
+            price:2000,
+            inStock: true,
+            getDetail: function(){
+                return `Product:${this.name} \nPrice:${this.price} \nInstock:${this.inStock ? 'Yes':'No'}`;
+            }
+        };
+        document.getElementById("output").textContent = product.getDetail();
+        console.log(product.getDetail());
+             
+            
+              /*  const student = new Object();//create student object using new objrct()
+                student.name="Lilaj Paudel"; //add properties
+                student.age=22;
+                student.subjects=[];
+                //method to add subjects dynamically
+                student.addSubject=function(subjectName){
+                    this.subjects.push(subjectName);
+                };
+                // add a least two subjects
+                student.addSubject("Science");
+                student.addSubject("Nepali");   
+                //log the students details
+                const studentDetails =`
+                Name:${student.name}
+                Age :${student.age}
+                Subjects:${student.subjects.join(",")}`;
+                document.getElementById("output2").textContent=studentDetails;
+             */      
+
+    </script>
+
+    
+</body>
+</html>

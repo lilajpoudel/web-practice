@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex JavaScript Check</title>
+</head>
+<body>
+    <h1>Check for "JavaScript" in Sentence</h1>
+    <pre id="output">Loading...</pre>
+
+    <script>
+        // Sentence to check
+        const sentence = "I love learning javascript and building web apps.";
+
+        // Create regex (case-insensitive)
+        const pattern = /javascript/i;
+
+        // Use .test() to check
+        const containsJavaScript = pattern.test(sentence);
+
+        // Output the result
+        const result = containsJavaScript 
+            ? "✅ The sentence contains the word 'JavaScript'." 
+            : "❌ The sentence does NOT contain the word 'JavaScript'.";
+
+        document.getElementById("output").textContent = result;
+    </script>
+</body>
+</html>

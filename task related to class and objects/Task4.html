@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Prototype Example</title>
+</head>
+<body>
+    <h1>Vehicle Age Info</h1>
+    <pre id="output">Loading...</pre>
+
+    <script>
+        // Step 1: Create constructor function
+        function Vehicle(brand, model, year) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+        }
+
+        // Step 2: Add getAge() method to the prototype
+        Vehicle.prototype.getAge = function() {
+            const currentYear = new Date().getFullYear();
+            return currentYear - this.year;
+        };
+
+        // Step 3: Create two vehicle objects
+        const vehicle1 = new Vehicle("Toyota", "Corolla", 2015);
+        const vehicle2 = new Vehicle("Honda", "Civic", 2020);
+
+        // Step 4: Log their age
+        const outputText = `
+${vehicle1.brand} ${vehicle1.model} is ${vehicle1.getAge()} years old.
+${vehicle2.brand} ${vehicle2.model} is ${vehicle2.getAge()} years old.
+        `;
+
+        document.getElementById("output").textContent = outputText;
+    </script>
+</body>
+</html>

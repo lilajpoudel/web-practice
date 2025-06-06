@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee salary info</h1>
+    <pre id = "output"></pre>
+    <script>
+        //create constructor function
+        function Employee(name,department,salary){
+            this.name=name;
+            this.department=department;
+            this.salary=salary;
+            this.getSalaryInfo= function(){
+                return `Name: ${this.name},Department: ${
+                this.department}
+                Salary:${this.salary}`;
+            };
+
+        }
+        const emp1 = new Employee("Ram Thapa","IT",4555);
+        const emp2= new Employee("hari thapa","CA",8444);
+
+        const outputText=`${emp1.getSalaryInfo()}\n${emp2.getSalaryInfo()}`;
+        document.getElementById("output").textContent=outputText;
+    </script>
+</body>
+</html>
