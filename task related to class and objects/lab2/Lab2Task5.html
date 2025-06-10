@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extract Numbers from String</title>
+</head>
+<body>
+  <h2>Extract Numbers from a String</h2>
+  
+  <input type="text" id="inputText" placeholder="Enter a sentence with numbers">
+  <button onclick="extractNumbers()">Extract Numbers</button>
+  
+  <p><strong>Numbers found:</strong> <span id="output"></span></p>
+
+  <script>
+    function extractNumbers() {
+      const text = document.getElementById('inputText').value;
+      const matches = text.match(/\d+/g);
+      const numbers = matches ? matches.map(Number) : [];
+      document.getElementById('output').textContent = numbers.join(', ');
+    }
+  </script>
+</body>
+</html>
